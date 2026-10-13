@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Horizon Bank</title>
+    <style>
+        /* About page styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #050862;
+    color: #173f3b;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-header,
+.section-width,
+.site-footer {
+    width: 1120px;
+    margin: auto;
+}
+
+.site-header {
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo-mark {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #173f3b;
+    color: #f8f6ef;
+}
+
+.logo > span:last-child {
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+    color: white;
+    font-size: 13px;
+}
+
+nav a {
+    padding: 8px 0;
+    
+}
+
+nav a:hover,
+nav a.active {
+    border-bottom: 2px solid #e58e52;
+    color: white;
+}
+
+.login-button {
+    border: 0;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.eyebrow {
+    margin-bottom: 20px;
+    color: cyan;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 62px;
+    line-height: 0.98;
+    color: white;
+}
+
+h1 em {
+    color: #1160df;
+}
+
+h2 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.06;
+    color:white;
+}
+
+.about-hero {
+    min-height: 360px;
+    padding-top: 75px;
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+
+.about-intro {
+    width: 375px;
+    padding-top: 55px;
+    color: #6c877f;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.story-block {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    padding: 55px 0 120px;
+}
+
+.story-image {
+    position: relative;
+    width: 450px;
+    height: 305px;
+    overflow: hidden;
+    background: #844aa2;
+}
+
+.image-sun {
+    position: absolute;
+    top: 32px;
+    left: 110px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: #df9e2e;
+}
+
+.image-line {
+    position: absolute;
+    bottom: -50px;
+    left: -100px;
+    width: 600px;
+    height: 110px;
+    border-radius: 50%;
+    background: #173f3b;
+    transform: rotate(9deg);
+}
+
+.story-image span {
+    position: absolute;
+    bottom: 22px;
+    left: 25px;
+    color: #f8f6ef;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.story-copy {
+    width: 425px;
+}
+
+.story-copy p:not(.eyebrow) {
+    color: #728a83;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.text-button {
+    display: inline-block;
+    border-bottom: 1px solid #e58e52;
+    padding-bottom: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color:floralwhite;
+}
+
+.values {
+    padding-bottom: 100px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 38px;
+}
+
+.section-heading > p {
+    width: 310px;
+    color: #718982;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.value-grid article {
+    padding: 25px 0;
+    border-top: 1px solid #d9dfd4;
+    background:rgba(7, 11, 20, 0.82);
+}
+
+.value-grid span {
+    color: #e58e52;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.value-grid h3 {
+    margin-top: 25px;
+    font-size: 17px;
+    color:white;
+}
+
+.value-grid p {
+    color: #78918a;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 46px 0;
+    color: #769087;
+    font-size: 11px;
+}
+
+.site-footer .logo {
+    color: white;
+    font-size: 17px;
+}
+
+.site-footer .logo-mark {
+    width: 27px;
+    height: 27px;
+}
+
+.site-footer a:last-child {
+    color: #173f3b;
+    font-weight: bold;
+}
+hr {
+    opacity: 0.6;
+}
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html"><span class="logo-mark">H</span> Horizon<span>Bank</span></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a class="active" href="about.html">About Us</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <button class="login-button" id="loginButton">Log in <span>→</span></button>
+    </header>
+
+    <main>
+        <section class="about-hero section-width">
+            <div><p class="eyebrow">OUR STORY</p><h1>A bank that<br><em>looks ahead.</em></h1></div>
+            <div class="about-intro"><p><em> <strong> Horizon Bank began with one simple idea: banking should help people feel more confident about the future, not more confused by it</strong></em>.</p><p> <em> <strong> Today, we bring together thoughtful technology and real human support to make good money decisions feel within reach.</strong></em></p></div>
+        </section>
+
+        <section class="story-block section-width">
+            <!-- <div class="story-image"><div class="image-sun"></div><div class="image-line"></div><span>EST. 1998</span></div> -->
+             <img src="banking card.png" alt="Banking Image" width="500" height="305">
+            <div class="story-copy"><p class="eyebrow">WHY HORIZON</p><h2>Progress is better<br>when it is shared.</h2><p> <em> <strong> We believe a bank should be a steady partner through every season of life. That means clear answers, fair products, and people who listen before they advise.</strong></em></p><p><em><strong> Our team works every day to create a calmer, more useful banking experience for our customers and the communities we call home.</strong></em></p><a class="text-button" href="index.html#contact">Start a conversation <span>→</span></a></div>
+        </section>
+        <hr>
+        <br><br><br>
+
+        <section class="values section-width">
+            <div class="section-heading"><div><p class="eyebrow">WHAT GUIDES US</p><h2>Good values.<br>Good business.</h2></div><p><em> <strong> Our principles show up in the small details: the way we explain things, solve problems, and show up for our customers.</strong> </em></p></div>
+            <div class="value-grid"><article><span>01</span><h3>Keep it clear</h3><p> <em> <strong> confusing language or hidden surprises. Just straightforward banking that makes sense.</strong></em></p></article><article><span>02</span><h3>Stay curious</h3><p><em> <strong> keep learning, listening, and finding better ways to make tomorrow more possible.</strong></em></p></article><article><span>03</span><h3>Be there</h3><p><em> <strong> life changes direction, our people are here with practical help and a human answer.</strong></em></p></article></div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><a class="logo" href="index.html"><span class="logo-mark">H</span> Horizon<span>Bank</span></a><p>© 2025 Horizon Bank. Banking for better tomorrows.</p><a href="index.html">Back home →</a></footer>
+    <script>
+        var loginButton = document.getElementById("loginButton");
+
+loginButton.onclick = function () {
+    alert("Online banking login is coming soon!");
+};
+    </script>
+</body>
+</html>
